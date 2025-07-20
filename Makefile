@@ -7,13 +7,13 @@ PWD := $(shell pwd)
 
 all:
 	echo $(PWD)
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	make -C $(KERNEL_DIR) M=$(PWD) modules
 
 clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	make -C $(KERNEL_DIR) M=$(PWD) clean
 
 install: install_module
 	install -Dm644 hotfix-kvadra-touchpad.conf /usr/lib/modules-load.d/hotfix-kvadra-touchpad.conf
 
 install_module:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules_install
+	make -C $(KERNEL_DIR) M=$(PWD) modules_install
