@@ -1,3 +1,14 @@
+# Quick Start
+
+```bash
+nix-shell # Enter nix-shell 
+```
+
+```bash
+make all
+sudo insmod hotfix-kvadra-touchpad.ko
+```
+
 # hotfix-kvadra-touchpad
 
 This simple kernel module provides a hotfix for touchpad issues
@@ -82,7 +93,7 @@ This issue did not exist in kernel version 6.6.47.
 A similar issue has been reported for Arch Linux against kernel version
 6.12.8:
 
-  * https://bbs.archlinux.org/viewtopic.php?id=302348
+* <https://bbs.archlinux.org/viewtopic.php?id=302348>
 
 ## The Solution
 
@@ -94,9 +105,9 @@ effectively preventing the kernel from disabling these interrupts.
 
 Please note that this approach may yield one of two results:
 
-  * it could fix the problem, in case that unhanded interrupt detection
+* it could fix the problem, in case that unhanded interrupt detection
     is false positive, as in our case
-  * or it could cause interrupt storm if the same interrupt occurs
+* or it could cause interrupt storm if the same interrupt occurs
     repeatedly without being recognized or handled (which is why the kernel
     automatically disables unhandled interrupts).
 
