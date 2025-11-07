@@ -114,5 +114,18 @@ Please note that this approach may yield one of two results:
 In our case, this solution has proven reliable and effectively resolves
 the initial problem.
 
+## Update
+
+Recently, Hans de Goede has posted the patch, that solves the problem
+at the kernel level:
+
+https://fedorapeople.org/~jwrdegoede/0001-spi-Try-to-get-ACPI-GPIO-IRQ-earlier.patch
+
+We have tested his patch at several notebooks and can confirm that
+his patch works and works reliable.
+
+So once this patch will reach the upstream kernel, the hotfix will not
+be needed anymore.
+
 <!-- vim:ts=8:sw=4:et:textwidth=72
 -->
