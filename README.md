@@ -127,5 +127,10 @@ his patch works and works reliable.
 So once this patch will reach the upstream kernel, the hotfix will not
 be needed anymore.
 
+## Update - 2
+
+Looks like Hans's patch has reached the upstream kernel and with
+the recent kernels this hotfix is not required anymore.
+
 <!-- vim:ts=8:sw=4:et:textwidth=72
 -->
